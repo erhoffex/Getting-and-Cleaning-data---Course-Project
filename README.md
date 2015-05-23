@@ -1,7 +1,26 @@
 # Getting-and-Cleaning-data---Course-Project
 This repo contains the Course Project from the Getting and Cleaning data course from Coursera
 
-This is the unique script needed:
+There is an unique script needed (code below).
+This script goes through all steps from the course project and it has been indicated with comments which parts of the code corresponds with the different steps of the course project.
+
+The output from step 1 is in the data frame named "mergedData".
+
+The output from step 2 is in the data frame named "mergedDataMeanStd".
+
+The output from steps 3 and 4 are in both, mergedData and mergedDataMeanStd.
+
+Finally, the output from step 5 in in the data frame called "tidyData" and it is also extracted to a txt file called "project_result.txt".
+
+After running the script, the data can be visualize by doing the following:
+
+data <- read.table('project_result.txt', header = TRUE)
+
+View(data)
+
+
+The script (without comments) is below. The complete version of the script with all comments is included into this GitHub repository under the name "run_analysis.R"
+
 
 library(dplyr)
 
@@ -50,5 +69,7 @@ tidyData <- mergedDataMeanStd %>%
         group_by_(.dots=grp_cols) %>%
         summarise_each(funs(mean))
 
-## FINALLY: EXPORT TIDYDATA INTO A CSV FILE IN THE WORKING DIRECTORY
-write.csv(tidyData, 'project_result.csv')
+## FINALLY: EXPORT TIDYDATA INTO A TXT FILE IN THE WORKING DIRECTORY AND THE DATAFRAME IS RETURNED
+write.table(tidyData, 'project_result.txt', row.name=FALSE)
+
+tidyData
