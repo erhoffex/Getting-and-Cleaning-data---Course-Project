@@ -4,13 +4,13 @@ This repo contains the Course Project from the Getting and Cleaning data course 
 There is an unique script needed (code below).
 This script goes through all steps from the course project and it has been indicated with comments which parts of the code corresponds with the different steps of the course project.
 
-The output from step 1 is in the data frame named "mergedData".
+The output from step 1 is in the data frame named "mergedData". First the information from the txt files are extracted and merged in a dataframe containind the data from the test and another one containing the data from training. After that, both data sets are merged together in the mergedData data frame with all relevant information.
 
-The output from step 2 is in the data frame named "mergedDataMeanStd".
+The output from step 2 is in the data frame named "mergedDataMeanStd". Starting from the data frame mergedData calculated before, only the columns containing the substring "mean" and "std" are kept in the new data frame mergedDataMeanStd.
 
-The output from steps 3 and 4 are in both, mergedData and mergedDataMeanStd.
+The output from steps 3 and 4 are in both, mergedData and mergedDataMeanStd. The names of the columns containing the data from different activities are taken from the features.txt file. The name of the two first columns are "subject" anc "activity". In addition, the values from activity are converted from integer to char values to have more descriptive values of the activity: walking, standing... This values are taken from the activity_labels.txt file. 
 
-Finally, the output from step 5 in in the data frame called "tidyData" and it is also extracted to a txt file called "project_result.txt".
+Finally, the output from step 5 in in the data frame called "tidyData" and it is also extracted to a txt file called "project_result.txt". To obtain this data frame, the mergedDataMeanStd data frame is grouped by the values of subject and activity to later calculate the mean of each single activity for each of these groups. The resulting data frame is returned and also extracted to the project_result.txt file in the working directory.
 
 After running the script, the data can be visualize by doing the following:
 
