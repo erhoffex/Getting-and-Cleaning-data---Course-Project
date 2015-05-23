@@ -4,6 +4,11 @@ This repo contains the Course Project from the Getting and Cleaning data course 
 There is an unique script needed (code below).
 This script goes through all steps from the course project and it has been indicated with comments which parts of the code corresponds with the different steps of the course project.
 
+The raw data can be found here:
+
+https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
+
+
 The output from step 1 is in the data frame named "mergedData". First the information from the txt files are extracted and merged in a dataframe containind the data from the test and another one containing the data from training. After that, both data sets are merged together in the mergedData data frame with all relevant information.
 
 The output from step 2 is in the data frame named "mergedDataMeanStd". Starting from the data frame mergedData calculated before, only the columns containing the substring "mean" and "std" are kept in the new data frame mergedDataMeanStd.
