@@ -11,7 +11,7 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 
 The output from step 1 is in the data frame named "mergedData". First the information from the txt files are extracted and merged in a dataframe containind the data from the test and another one containing the data from training. After that, both data sets are merged together in the mergedData data frame with all relevant information.
 
-The output from step 2 is in the data frame named "mergedDataMeanStd". Starting from the data frame mergedData calculated before, only the columns containing the substring "mean" and "std" are kept in the new data frame mergedDataMeanStd.
+The output from step 2 is in the data frame named "mergedDataMeanStd". Starting from the data frame mergedData calculated before, only the columns containing the substring "mean" and "std" (including "meanFreq") are kept in the new data frame mergedDataMeanStd.
 
 The output from steps 3 and 4 are in both, mergedData and mergedDataMeanStd. The names of the columns containing the data from different activities are taken from the features.txt file. The name of the two first columns are "subject" anc "activity". In addition, the values from activity are converted from integer to char values to have more descriptive values of the activity: walking, standing... This values are taken from the activity_labels.txt file. 
 
